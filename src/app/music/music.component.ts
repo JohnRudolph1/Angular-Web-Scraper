@@ -10,6 +10,7 @@ export class MusicComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
