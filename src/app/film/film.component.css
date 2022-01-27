@@ -1,0 +1,529 @@
+.container {
+    padding: 2rem 0rem;
+  }
+  
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 400px;
+    }
+    .modal-dialog .modal-content {
+      padding: 1rem;
+    }
+  }
+  .modal-header .close {
+    margin-top: -1.5rem;
+  }
+  
+  .form-title {
+    margin: -2rem 0rem 2rem;
+  }
+  
+  .btn-round {
+    border-radius: 3rem;
+  }
+  
+  .delimiter {
+    padding: 1rem;
+  }
+  
+  .social-buttons .btn {
+    margin: 0 0.5rem 1rem;
+  }
+  
+  .signup-section {
+    padding: 0.3rem 0rem;
+  }
+  .header {
+    padding: 80px; /* some padding */
+    text-align: center; /* center the text */
+    background: #333; /* green background */
+    color: white; /* white text color */
+  }
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size: 40px;
+  }
+  /* Style the top navigation bar */
+  .navbar {
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right; /* Float a link to the right */
+  }
+  
+  /* Change color on hover/mouse-over */
+  .navbar a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+  }
+  /* Ensure proper sizing */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Column container */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%; /* Set the width of the sidebar */
+    background-color: #f1f1f1; /* Grey background color */
+    padding: 20px; /* Some padding */
+  }
+  
+  /* Main column */
+  .main {
+    flex: 70%; /* Set the width of the main content */
+    background-color: white; /* White background color */
+    padding: 20px; /* Some padding */
+  }
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
+    }
+  }
+  .footer {
+    padding: 20px; /* Some padding */
+    text-align: center; /* Center text*/
+    background: #ddd; /* Grey background */
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Height of the footer */
+  }
+  body {
+    background: #1abc9c;
+  }
+  .boxed {
+    border: 1px solid green;
+  }
+  @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400|Playfair+Display:400,700,400italic|Libre+Baskerville:400,700,400italic|Muli:300,400|Open+Sans:400,300,700|Oswald:400,700|Raleway:400,100,300,700|Montserrat:400,700|Merriweather:400,300,300italic,400italic,700|Bree+Serif|Vollkorn:400italic,400,700|Abril+Fatface|Cardo:400,400italic);
+  
+  html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  /* Basically just a bunch of typeface classes, some helper classes(letter-spacing, font-weight, etc.), decorative classes(line-on-headers, double-lines, etc). Three types of bg, image, gradient and solid color. I do this for testing headings/hero-image typography. Now there are ten presets here, but you can mix everything. I know that this brings to classivitis, but I still didn't dwelved into Saas, it is next on my learning roadmap, but I will create a fork soon with Saas and variables. */
+  
+  /* Preset 1 ---- Bold/cursive  */
+  /* Preset 2 ---- Thin/bold  */
+  /* Preset 3 ---- Add emphasis with color */
+  /* Preset 4 ---- Thin/Super bold/thin */
+  /* Preset 5 ---- Playing with serifs */
+  /* Preset 6 ---- Super contrast */
+  /* Preset 7 ---- Vertical text */
+  /* Preset 8 ---- Playful type */
+  /* Preset 9 ---- Middle flourish */
+  /* Preset 10 ---- Overlay text */
+  
+  /* ==== Font sizes(based on Typeplate's scale) ==== */
+  html {
+    font: normal 112.5%/1.65 serif; /* base font size 18px with 1.65 line-height */
+    -moz-font-feature-settings: "liga=1, dlig=1"; /* common and discretionary ligatures */
+    -ms-font-feature-settings: "liga", "dlig";
+    -webkit-font-feature-settings: "liga", "dlig";
+    -o-font-feature-settings: "liga", "dlig";
+    font-feature-settings: "liga", "dlig";
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1;
+    margin-top: 0;
+    color: #fff;
+    display: inline-block;
+    position: relative;
+  }
+  p {
+    margin-top: 4rem;
+    color: black;
+    font-size: 0.9rem;
+    line-height: 1;
+  }
+  .gigantic {
+    font-size: 11rem;
+  }
+  .supersize {
+    font-size: 8rem;
+  }
+  .tera {
+    font-size: 6.5rem; /* 117 / 18 = 6.5 */
+    margin-bottom: 0.25385rem;
+  }
+  
+  .giga {
+    font-size: 5rem; /* 90 / 18 = 5 */
+    margin-bottom: 0.33rem;
+  }
+  
+  .mega {
+    font-size: 4rem; /* 72 / 18 = 4 */
+    margin-bottom: 0.4125rem;
+  }
+  
+  .alpha {
+    font-size: 3.33333rem; /* 60 / 18 = 3.3333 */
+    margin-bottom: 0.495rem;
+    color: white;
+  }
+  
+  .beta {
+    font-size: 2.6667rem; /* 48 / 18 = 2.6667 */
+    margin-bottom: 0.61875rem;
+  }
+  
+  .gamma {
+    font-size: 2rem; /* 36 / 18 = 2 */
+    margin-bottom: 0.825rem;
+  }
+  
+  .delta {
+    font-size: 1.3333333333333333rem; /* 24 / 18 = 1.3333 */
+    margin-bottom: 1.2375rem;
+  }
+  
+  .epsilon {
+    font-size: 1.16667rem; /* 21 / 18 = 1.1667 */
+    margin-bottom: 1.41429rem;
+  }
+  
+  .zeta {
+    font-size: 1rem; /* 18 = 18 × 1 */
+    margin-bottom: 1.65rem;
+  }
+  /* ==== Typefaces  ==== */
+  
+  .open-sans {
+    font-family: "Open Sans";
+  }
+  .lato {
+    font-family: "Lato";
+  }
+  .playfair-display {
+    font-family: "Playfair Display";
+  }
+  .libre-baskerville {
+    font-family: "Libre Baskerville";
+  }
+  .oswald {
+    font-family: "Oswald";
+  }
+  .montserrat {
+    font-family: "Montserrat";
+  }
+  .vollkorn {
+    font-family: "Vollkorn";
+  }
+  .bree-serif {
+    font-family: "Bree Serif";
+  }
+  .raleway {
+    font-family: "Raleway";
+  }
+  .merriweather {
+    font-family: "Merriweather";
+  }
+  .cardo {
+    font-family: "Cardo";
+  }
+  .abril-fatface {
+    font-family: "Abril Fatface";
+  }
+  .muli {
+    font-family: "Muli";
+  }
+  
+  /* ==== Weights, styles, letterspacing, etc. ==== */
+  
+  .thin {
+    font-weight: 100;
+  }
+  .light {
+    font-weight: 300;
+  }
+  .regular {
+    font-weight: 400;
+  }
+  .bold {
+    font-weight: 700;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .normal {
+    font-style: normal;
+  }
+  .ls-small {
+    letter-spacing: 2px;
+  }
+  .ls-medium {
+    letter-spacing: 4px;
+  }
+  .ls-large {
+    letter-spacing: 8px;
+  }
+  .ls-xlarge {
+    letter-spacing: 12px;
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .color-emphasis-1 {
+    color: #ff4056;
+  }
+  .color-emphasis-2 {
+    color: #000;
+  }
+  .color-emphasis-3 {
+    color: #60547c;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .line-height-small {
+    line-height: 1.2;
+  }
+  .line-height-medium {
+    line-height: 1.45;
+  }
+  .line-height-large {
+    line-height: 1.65;
+  }
+  
+  /* ===== Flourish, heading horizontal lines, etc. ==== */
+  
+  .thick-header-line:before,
+  .thick-header-line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    height: 4px;
+    background-color: #fff;
+    top: 50%;
+    margin-bottom: -4px;
+  }
+  .thick-header-line:before {
+    left: -7.5rem;
+  }
+  .thick-header-line:after {
+    right: -7.5rem;
+  }
+  
+  .thin-header-line:before,
+  .thin-header-line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    height: 1px;
+    background-color: #fff;
+    top: 50%;
+    margin-bottom: -1px;
+  }
+  .thin-header-line:before {
+    left: -7.5rem;
+  }
+  .thin-header-line:after {
+    right: -7rem;
+  }
+  .line-after-heading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    width: 4rem;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: -2rem;
+  }
+  .double-header-line:before,
+  .double-header-line:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    background-color: transparent;
+    height: 4px;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    top: 50%;
+    margin-bottom: -4px;
+  }
+  .double-header-line:before {
+    left: -7.5rem;
+  }
+  .double-header-line:after {
+    right: -7.5rem;
+  }
+  .decorative-span {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 60px;
+    margin: 0 10px;
+    position: relative;
+    vertical-align: middle;
+    color: #fff;
+  }
+  .decorative-span:before,
+  .decorative-span:after {
+    background-color: #fff;
+    bottom: 100%;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    right: 0;
+  }
+  .decorative-span:after {
+    top: 96%;
+  }
+  
+  .text-overlay:before {
+    content: attr(data-text);
+    z-index: 99;
+    width: 98%;
+    height: 50px;
+    background-color: hsla(0, 0%, 0%, 0.6);
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 50px;
+    text-align: center;
+    color: #f0ad00;
+    font-family: "bree serif";
+    font-style: normal;
+    font-size: 1.3rem;
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 400;
+  }
+  
+  /* ==== General styles ==== */
+  section {
+    height: 600px;
+    padding: 3rem 0;
+    position: relative;
+  }
+  .wrapper {
+    max-width: 53.33rem;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    transform: translateY(-50%);
+    top: 50%;
+    text-align: center;
+  }
+  .wrapper.large-wrap {
+    max-width: 100%;
+  }
+  section:nth-of-type(3n + 1) {
+    background-size: cover;
+  }
+  section:nth-of-type(1) {
+    background-image: url(https://explorestlouis.com/wp-content/uploads/2020/08/Foxtheatre-Exterior.jpg);
+  }
+  section:nth-of-type(2) {
+    background: -webkit-linear-gradient(
+      90deg,
+      #134e5e 10%,
+      #71b280 90%
+    ); /* Chrome 10+, Saf5.1+ */
+    background: -moz-linear-gradient(
+      90deg,
+      #134e5e 10%,
+      #71b280 90%
+    ); /* FF3.6+ */
+    background: -ms-linear-gradient(90deg, #134e5e 10%, #71b280 90%); /* IE10 */
+    background: -o-linear-gradient(
+      90deg,
+      #134e5e 10%,
+      #71b280 90%
+    ); /* Opera 11.10+ */
+    background: linear-gradient(90deg, #134e5e 10%, #71b280 90%); /* W3C */
+  }
+  section:nth-of-type(3) {
+    background-color: #2a2c39;
+  }
+  section:nth-of-type(4) {
+    background-image: url();
+  }
+  
+  section:before {
+    content: attr(data-description);
+    font-size: 0.9rem;
+    font-family: "oswald";
+    color: #fff;
+    position: absolute;
+    z-index: 20;
+    left: 2rem;
+    top: 2rem;
+  }
+  
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    text-align: center;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+  .card:nth-child(1) {
+    display: none;
+  }
+  .card-img-top {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
