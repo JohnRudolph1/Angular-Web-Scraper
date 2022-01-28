@@ -8,6 +8,8 @@ footer{
     width: 100vw;
     padding-top: 40px;
     color: #fff;
+    position:fixed;
+    bottom:0;
 }
 .footer-content{
     display: flex;
