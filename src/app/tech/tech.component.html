@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <body>
-    
-    <div class="w3-container w3-teal">
-    <h1>Scrape Tech Events</h1>
-        
-    
-    </div>
+      <div class="header">
+        <h1>Tech Events</h1>
+        <p>Finding local events near you!.</p>
+        <button (click)="fetchTech()">Scrape Tech Events</button>
+      </div>
     
     <div class="w3-content">
     
     <div class="w3-row w3-margin">
-    <button (click)="fetchTech()">Scrape Tech Events</button>
+    
     <div class="w3-third">
-      <img src="https://www.investopedia.com/thmb/yvwGsKs6nSHBiOoa9cnoX5uHCPY=/735x0/GettyImages-964033964-ca3290057ccc4024b57e755423572264.jpg" style="width:100%;min-height:200px">
+      <!-- <img src="https://www.investopedia.com/thmb/yvwGsKs6nSHBiOoa9cnoX5uHCPY=/735x0/GettyImages-964033964-ca3290057ccc4024b57e755423572264.jpg" style="width:100%;min-height:200px"> -->
     </div>
     <div *ngFor="let event of events$ | async">
     <div class="w3-twothird w3-container">
+      <div class="w3-third">
+      </div>
       <h2>{{event.title}}</h2>
       <p>
       {{event.date}}

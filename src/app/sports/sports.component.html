@@ -5,19 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <body>
-    
-    <div class="w3-container w3-teal">
-    <h1>Scrape Sports Events</h1>
-        
-    
-    </div>
+      <div class="header">
+        <h1>Sporting Events</h1>
+        <p>Finding local events near you!.</p>
+        <button (click)="fetchSports()">Scrape Sporting Events</button>
+      </div>
     
     <div class="w3-content">
     
     <div class="w3-row w3-margin">
-    <button (click)="fetchSports()">Scrape Sporting Events</button>
     <div class="w3-third">
-      <img src="https://i.pinimg.com/originals/23/14/31/231431d7f016b83181cf8a90fbc52d00.jpg" style="width:100%;min-height:200px">
+      <!-- <img src="https://i.pinimg.com/originals/23/14/31/231431d7f016b83181cf8a90fbc52d00.jpg" style="width:100%;min-height:200px"> -->
     </div>
     <div *ngFor="let event of events$ | async">
     <div class="w3-twothird w3-container">

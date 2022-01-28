@@ -12,6 +12,7 @@ export class TechComponent {
   constructor(private eventData: FetchData){}
 
   fetchTech() {
+
     this.events$ = this.eventData.fetchTech();
   }
 }

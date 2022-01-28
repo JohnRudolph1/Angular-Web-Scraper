@@ -5,19 +5,17 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-
-    <div class="w3-container w3-teal">
-        <h1>Scrape Music Events</h1>
-
-
+    <div class="header">
+        <h1>Music Events</h1>
+        <p>Finding local events near you!.</p>
+        <button (click)="fetchMusic()">Scrape Music Events</button>
     </div>
 
     <div class="w3-content">
 
         <div class="w3-row w3-margin">
-            <button (click)="fetchMusic()">Scrape Music Events</button>
             <div class="w3-third">
-                <img src="insert picture for event" style="width:100%;min-height:200px">
+                <!-- <img src="insert picture for event" style="width:100%;min-height:200px"> -->
             </div>
             <div *ngFor="let event of events$ | async">
                 <div class="w3-twothird w3-container">

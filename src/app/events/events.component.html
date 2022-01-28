@@ -5,17 +5,15 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <body>
-
-  <div class="w3-container w3-teal">
-    <h1>Scrape All Events</h1>
-
-
+  <div class="header">
+    <h1>All Events</h1>
+    <p>Finding local events near you!.</p>
+    <button (click)="fetchEvents()">Scrape All Events</button>
   </div>
 
   <div class="w3-content">
 
     <div class="w3-row w3-margin">
-      <button (click)="fetchEvents()">Scrape All Events</button>
       <div class="w3-third">
         <img src="" style="width:100%;min-height:200px">
       </div>
