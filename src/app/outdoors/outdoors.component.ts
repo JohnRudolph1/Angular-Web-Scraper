@@ -3,7 +3,7 @@
   import { HttpClient } from '@angular/common/http';
   import { Component, OnInit } from '@angular/core';
   import { Injectable } from '@angular/core';
-  import { FetchComponent } from '../fetch/fetch.component';
+  import { FetchData } from '../fetch.component';
   import { Observable } from 'rxjs';
   @Component({
     selector: 'app-outdoors',
@@ -11,11 +11,11 @@
   styleUrls: ['./outdoors.component.css']
   })
   @Injectable()
-  export class OutdoorsComponent implements OnInit {
+  export class OutdoorsComponent {
 
-    constructor() { }
-  
-    ngOnInit(): void {
+    events$;
+    constructor(private eventData: FetchData){}
+  fetchOutdoors() {
+      this.events$ = this.eventData.fetchOutdoors();
     }
-  
-  }
+}

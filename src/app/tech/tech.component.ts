@@ -1,21 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { FetchComponent } from '../fetch/fetch.component';
+import { FetchData } from '../fetch.component';
 
 @Component({
   selector: 'app-tech',
   templateUrl: './tech.component.html',
   styleUrls: ['./tech.component.css']
 })
-export class TechComponent implements OnInit {
+export class TechComponent {
 
   events$;
-  constructor(private eventData: FetchComponent){}
-  ngOnInit(): void {
-    // throw new Error('Method not implemented.');
+  constructor(private eventData: FetchData){}
+
+  fetchTech() {
+    this.events$ = this.eventData.fetchTech();
   }
-
-//   fetchTech() {
-//     this.events$ = this.eventData.fetchTech();
-
-// }
 }

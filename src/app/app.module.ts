@@ -14,7 +14,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import { TechComponent } from './tech/tech.component';
 import { MusicComponent } from './music/music.component';
-// import { FetchComponent } from './fetch/fetch.component';
 // import { FunctionComponent } from './fetch/functions.component';
 
 
@@ -31,9 +30,7 @@ import { MusicComponent } from './music/music.component';
     NavbarComponent,
     TechComponent,
     MusicComponent,
-    // FetchComponent,
-    // FunctionComponent,
-        // routingComponents,
+   
   ],
   imports: [
     BrowserModule,

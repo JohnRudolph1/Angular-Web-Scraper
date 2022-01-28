@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-
+import { FetchData } from '../fetch.component';
 @Component({
   selector: 'app-homw',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent  {
 
-  constructor() { }
+  events$;
+  constructor(private eventData: FetchData){}
 
-  ngOnInit(): void {
+  fetchEvents() {
+    this.events$ = this.eventData.fetchEvents();
   }
-
 }

@@ -3,35 +3,32 @@
 <title>Web Scraper</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <body>
 
-    <div class="w3-container w3-teal">
-        <h1>Scrape Community Events</h1>
-    </div>
+<div class="w3-container w3-teal">
+<h1>Scrape Community Events</h1>
+    
 
-    <div class="w3-content">
+</div>
 
-        <div class="w3-row w3-margin">
+<div class="w3-content">
 
-            <div class="w3-third">
-                <img src="https://images.macrumors.com/t/vMbr05RQ60tz7V_zS5UEO9SbGR0=/1600x900/smart/article-new/2018/05/apple-music-note.jpg" style="width:100%;min-height:200px">
-            </div>
-            <button (click)="fetchCommunity()">Scrape Community Events</button>
+<div class="w3-row w3-margin">
+<button (click)="fetchCommunity()">Scrape Community Events</button>
+<div class="w3-third">
+  <img src="https://fltmag.com/wp-content/uploads/2020/06/unnamed.png" style="width:100%;min-height:200px">
+</div>
+<div *ngFor="let event of events$ | async">
+<div class="w3-twothird w3-container">
+  <h2>{{event.title}}</h2>
+  <p>
+  {{event.date}}
+  </p>
+  <p>
+  {{event.location}}
+  </p>
+  <button><a href = "{{event.url}}">Event Link</a></button>
+</div>
 
-            <div class="w3-twothird w3-container">
-                <h2>{{event.title}}/h2>
-                    <p>
-                        {{event.date}}
-                    </p>
-                    <p>
-                        {{event.location}}
-                    </p>
-                    <button><a href="{{event.url}}">Event Link</a></button>
-            </div>
-
-        </div>
-    </div>
-</body>
-
-</html>
+</div>
+</div>

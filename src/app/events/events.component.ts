@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { FetchComponent } from '../fetch/fetch.component';
+import { FetchData } from '../fetch.component';
 // import { FunctionComponent } from '../fetch/functions.component';
 @Component({
   selector: 'app-events',
@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsComponent {
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  events$;
+    constructor(private eventData: FetchData){}
+  
+    fetchEvents() {
+      this.events$ = this.eventData.fetchEvents();
+    }
 }
