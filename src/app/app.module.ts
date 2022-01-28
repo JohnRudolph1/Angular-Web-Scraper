@@ -14,6 +14,7 @@ import {HttpClientModule} from '@angular/common/http';
 import {HttpClient} from '@angular/common/http';
 import { TechComponent } from './tech/tech.component';
 import { MusicComponent } from './music/music.component';
+import { FetchData } from './fetch.component';
 // import { FunctionComponent } from './fetch/functions.component';
 
 
@@ -37,7 +38,7 @@ import { MusicComponent } from './music/music.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [FetchData],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
