@@ -4,34 +4,41 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
-import { MusicComponent } from './music/music.component';
 import { FilmComponent } from './film/film.component';
-import { TechComponent } from './tech/tech.component';
 import { CommunityComponent } from './community/community.component';
 import { SportsComponent } from './sports/sports.component';
 import { OutdoorsComponent } from './outdoors/outdoors.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import {HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
+import { TechComponent } from './tech/tech.component';
+import { MusicComponent } from './music/music.component';
+// import { FetchComponent } from './fetch/fetch.component';
+// import { FunctionComponent } from './fetch/functions.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
-    MusicComponent,
-    TechComponent,
     FilmComponent,
-    // routingComponents,
     NavbarComponent,
     CommunityComponent,
     SportsComponent,
     OutdoorsComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
+    TechComponent,
+    MusicComponent,
+    // FetchComponent,
+    // FunctionComponent,
+        // routingComponents,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    // MatToolbarModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
