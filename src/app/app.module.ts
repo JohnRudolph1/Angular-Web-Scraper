@@ -15,6 +15,7 @@ import { HttpClient } from '@angular/common/http';
 import { TechComponent } from './tech/tech.component';
 import { MusicComponent } from './music/music.component';
 import { FetchData } from './fetch.component';
+import { FooterComponent } from './footer/footer.component';
 // import { FunctionComponent } from './fetch/functions.component';
 
 @NgModule({
@@ -30,6 +31,7 @@ import { FetchData } from './fetch.component';
     NavbarComponent,
     TechComponent,
     MusicComponent,
+    FooterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [FetchData],

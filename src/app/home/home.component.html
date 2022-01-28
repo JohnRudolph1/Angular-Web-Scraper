@@ -1,37 +1,27 @@
 <!DOCTYPE html>
-<html>
-<title>Web Scraper</title>
+<html lang="en">
+<head>
+<title>Events Scraper</title>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
 <body>
-
-  <div class="w3-container w3-teal">
-    <h1>Home Page</h1>
-
-
+ 
+  
+  <div class="header">
+    <h1>Live & Local</h1>
+    <p>Finding local events near you!.</p>
   </div>
-
-  <div class="w3-content">
-
-    <div class="w3-row w3-margin">
-
-      <div class="w3-third">
-      </div>
-      <div *ngFor="let event of events$ | async">
-        <div class="w3-twothird w3-container">
-          <h2>{{event.title}}</h2>
-          <p>
-            {{event.date}}
-          </p>
-          <p>
-            {{event.location}}
-          </p>
-          <button><a href="{{event.url}}">Event Link</a></button>
-        </div>
-      </div>
+  
+  
+  <div class="row">
+    <div class="side">
+      <h2>About Event Scraper</h2>
+      
+      <p>This event scraper will allow you to scrape local events from  the event brite webite in order to see events that are closest to you!</p>
+     
     </div>
   </div>
-</body>
-
-</html>
+  
+  
+ 
+  

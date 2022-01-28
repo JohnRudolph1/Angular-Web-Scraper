@@ -7,10 +7,5 @@ import { FetchData } from '../fetch.component';
 })
 export class HomeComponent  {
 
-  events$;
-  constructor(private eventData: FetchData){}
-
-  fetchEvents() {
-    this.events$ = this.eventData.fetchEvents();
-  }
+  
 }
