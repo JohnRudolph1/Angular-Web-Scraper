@@ -54,3 +54,4 @@ const getEvents = async (url) => {
 module.exports = getEvents;
 //if you want to scrape other sites just make a new scraper and export the function
 //then add the function to the server to allow it to fetch from new site
+
