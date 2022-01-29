@@ -1,4 +1,4 @@
-const PORT = 4200;
+const PORT = 3000;
 const axios = require("axios");
 const express = require("express");
 const app = express();
@@ -6,11 +6,9 @@ const path = require("path");
 const cors = require("cors");
 const getEvents = require("./eventPageScraper");
 const res = require("express/lib/response");
-
+//npm run server outside of scraper folder in the main flder
 app.use(cors());
 
-
-// app.use(express.static(path.join(__dirname, "html")));
 
 
 app.get("/", async (req, res) => {
@@ -68,25 +66,8 @@ app.get("/outdoors", async (req, res) => {
   console.log(results);
   res.json(results);
 });
-const eventRouter = require("./routes/events");
 
-app.use("/events", eventRouter )
 
 app.listen(PORT);
+console.log(`server listening on ${PORT}`)
 
-// app.get("/scrape", async function (req, res) {
-//   res.json("This is my webscraper");
-//   await getEvents();
-//   res.json("Scraped");
-// });
-// app.listen(PORT);
-///path be local host
-//res.send()
-//set up api routes that serve up html
-//express vid how to render html
-
-//app.get/events/music
-//use angular 
-//events component that makes request based on the button click 
-//follder called client ng new 
-//npm concurrentley
